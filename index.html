@@ -32,9 +32,8 @@
         inc = document.querySelector("#inc");
         type = document.querySelector("#type");
 
-        inc.value += parseInt(inc.value)+page;
+        inc.value = parseInt(inc.value)+page;
         img.src = prefix.value + inc.value + type.value;
-        alert(img.src);
       }
     </script>
   </head>
@@ -52,9 +51,9 @@
       <button onclick="nextPage(0);return false;">go</button>
 
       <a href="#" onclick="nextPage(1);return false;">
-        <img id="img" src="https://placeimg.com/20/20/any">
+        <img id="img" src="https://placeimg.com/100/100/any">
       </a>
-      
+
       <button onclick="nextPage(-1);return false;">next</button>
       <button onclick="nextPage(1);return false;">back</button>
     </div>
