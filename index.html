@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sockcaps</title>
+  
+    <style type="text/css">
+      #wrap {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        text-align: center;
+        min-height: 100vh;
+      }
+
+      #inc {
+        width: 40px;
+      }
+
+      #img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
+    </style>
+  
+    <script type="text/javascript">
+      let a_btn = document.querySelector("#btn");
+      a_btn.onclick = () => {
+        alert("ganteng");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <input id="prefix" type="text" name="">
+      <input id="inc" type="number" name="">
+      <select id="type" name="cars">
+        <option value=".jpg">jpg</option>
+        <option value=".png">png</option>
+        <option value=".gif">gif</option>
+        <option value=".jpeg">jpeg</option>
+      </select>
+
+      <a id="btn">
+        <img id="img" src="https://placeimg.com/640/480/any">
+      </a>
+    </div>
+    
+  </body>
+
+</html>
