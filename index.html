@@ -26,9 +26,15 @@
     </style>
   
     <script type="text/javascript">
-      let a_btn = document.querySelector("#btn");
-      a_btn.onclick = () => {
-        alert("ganteng");
+      function nextPage(page) {
+        img = document.querySelector("#img");
+        prefix = document.querySelector("#prefix");
+        inc = document.querySelector("#inc");
+        type = document.querySelector("#type");
+
+        inc.value += parseInt(inc.value)+page;
+        img.src = prefix.value + inc.value + type.value;
+        alert(img.src);
       }
     </script>
   </head>
@@ -37,16 +43,20 @@
     <div id="wrap">
       <input id="prefix" type="text" name="">
       <input id="inc" type="number" name="">
-      <select id="type" name="cars">
+      <select id="type" name="type">
         <option value=".jpg">jpg</option>
         <option value=".png">png</option>
         <option value=".gif">gif</option>
         <option value=".jpeg">jpeg</option>
       </select>
+      <button onclick="nextPage(0);return false;">go</button>
 
-      <a id="btn">
-        <img id="img" src="https://placeimg.com/100/100/any">
+      <a href="#" onclick="nextPage(1);return false;">
+        <img id="img" src="https://placeimg.com/20/20/any">
       </a>
+      
+      <button onclick="nextPage(-1);return false;">next</button>
+      <button onclick="nextPage(1);return false;">back</button>
     </div>
     
   </body>
